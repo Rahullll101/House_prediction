@@ -1,0 +1,65 @@
+﻿No.,Station Name (English),Station Name (Kannada),Line,Opened Date,Day,Layout,Abbreviations
+1,Attiguppe,ಅತ್ತಿಗುಪ್ಪೆ,Purple Line,16-Nov-15,Monday,Elevated,AGPP
+2,Baiyappanahalli ,ಬೈಯ್ಯಪ್ಪನಹಳ್ಳಿ,Purple Line,20-Oct-11,Thursday,At Grade,BYPL
+3,Banashankari,ಬನಶಂಕರಿ,Green Line,18-Jun-17,Sunday,Elevated,BSNK
+4,Krantivira Sangolli Rayanna Railway Station,ಕ್ರಾಂತಿವೀರ ಸಂಗೊಳ್ಳಿ ರಾಯಣ್ಣ ರೈಲು ನಿಲ್ದಾಣ,Purple Line,29-Apr-16,Friday,Underground,SRCS
+5,Chickpete,ಚಿಕ್ಕಪೇಟೆ,Green Line,18-Jun-17,Sunday,Underground,CKPE
+6,Cubbon Park,ಕಬ್ಬನ್ ಪಾರ್ಕ್,Purple Line,29-Apr-16,Friday,Underground,CBPK
+7,Dasarahalli,ದಾಸರಹಳ್ಳಿ,Green Line,01-May-15,Friday,Elevated,DSH
+8,Deepanjali Nagar,ದೀಪಾಂಜಲಿ ನಗರ,Purple Line,16-Nov-15,Monday,Elevated,DJNR
+9,Doddakallasandra,ದೊಡ್ಡಕಲ್ಲಸಂದ್ರ,Green Line,15-Jan-21,Friday,Elevated,KLPK
+10,Garudacharapalya,ಗರುಡಾಚಾರ್‍‍ಪಾಳ್ಯ,Purple Line,26-Mar-23,Sunday,Elevated,GDCP
+11,Goraguntepalya,ಗೊರಗುಂಟೆಪಾಳ್ಯ,Green Line,01-Mar-14,Saturday,Elevated,YPI
+12,Halasuru,ಹಲಸೂರು,Purple Line,20-Oct-11,Thursday,Elevated,HLRU
+13,Hoodi,ಹೂಡಿ,Purple Line,26-Mar-23,Sunday,Elevated,DKIA
+14,Hopefarm Channasandra,ಹೋಪ್ ಫಾರ್ಮ್ ಚನ್ನಸಂದ್ರ,Purple Line,26-Mar-23,Sunday,Elevated,UWVL
+15,"Sri Balagangadharanatha Swamiji Station, Hosahalli","ಶ್ರೀ ಬಾಲಗಂಗಾಧರನಾಥ ಸ್ವಾಮೀಜಿ ನಿಲ್ದಾಣ,ಹೊಸಹಳ್ಳಿ",Purple Line,16-Nov-15,Monday,Elevated,HSLI
+16,Indiranagar,ಇಂದಿರಾ ನಗರ,Purple Line,20-Oct-11,Thursday,Elevated,IDN
+17,Jalahalli,ಜಾಲಹಳ್ಳಿ,Green Line,01-May-15,Friday,Elevated,JLHL
+18,Jayanagar,ಜಯನಗರ,Green Line,18-Jun-17,Sunday,Elevated,JYN
+19,Jayaprakash Nagar,ಜಯಪ್ರಕಾಶ ನಗರ,Green Line,18-Jun-17,Sunday,Elevated,JPN
+20,Jnanabharathi,ಜ್ಞಾನಭಾರತಿ,Purple Line,31-Aug-21,Tuesday,Elevated,BGUC
+21,Kadugodi Tree Park,ಕಾಡುಗೋಡಿ ಟ್ರೀ ಪಾರ್ಕ್,Purple Line,26-Mar-23,Sunday,Elevated,KDGD
+22,Krishna Rajendra Market,ಕೃಷ್ಣ ರಾಜೇಂದ್ರ ಮಾರುಕಟ್ಟೆ,Green Line,18-Jun-17,Sunday,Underground,KRMT
+23,Krishnarajapuram (K.R.Puram),ಕೃಷ್ಣರಾಜಪುರ (ಕೆ. ಆರ್. ಪುರ),Purple Line,26-Mar-23,Sunday,Elevated,KRAM
+24,Kengeri ,ಕೆಂಗೇರಿ,Purple Line,31-Aug-21,Tuesday,Elevated,KGIT
+25,Kengeri Bus Terminal,ಕೆಂಗೇರಿ ಬಸ್ ಟರ್ಮಿನಲ್,Purple Line,31-Aug-21,Tuesday,Elevated,MLSD
+26,Konanakunte Cross,ಕೋಣನಕುಂಟೆ ಕ್ರಾಸ್,Green Line,15-Jan-21,Friday,Elevated,APRC
+27,Kundalahalli,ಕುಂದಲಹಳ್ಳಿ,Purple Line,26-Mar-23,Sunday,Elevated,KDNH
+28,Lalbagh,ಲಾಲ್ ಬಾಗ್,Green Line,18-Jun-17,Sunday,Elevated,LBGH
+29,Magadi Road,ಮಾಗಡಿ ರಸ್ತೆ,Purple Line,16-Nov-15,Monday,Elevated,MIRD
+30,Mahalakshmi,ಮಹಾಲಕ್ಷ್ಮೀ,Green Line,01-Mar-14,Saturday,Elevated,MHLI
+31,Mahakavi Kuvempu Road,ಮಹಾಕವಿ ಕುವೆಂಪು ರಸ್ತೆ,Green Line,01-Mar-14,Saturday,Elevated,KVPR
+32,"Nadaprabhu Kempegowda Station, Majestic ","ನಾಡಪ್ರಭು ಕೆಂಪೇಗೌಡ ನಿಲ್ದಾಣ, ಮೆಜೆಸ್ಟಿಕ್",Purple Line,29-Apr-16,Friday,Underground,KGWA
+32,"Nadaprabhu Kempegowda Station, Majestic ","ನಾಡಪ್ರಭು ಕೆಂಪೇಗೌಡ ನಿಲ್ದಾಣ, ಮೆಜೆಸ್ಟಿಕ್",Green Line,18-Jun-17,Sunday,Underground,KGWA
+33,Mahatma Gandhi Road,ಮಹಾತ್ಮಾ ಗಾಂಧಿ ರಸ್ತೆ,Purple Line,20-Oct-11,Thursday,Elevated,MAGR
+34,Mysore Road,ಮೈಸೂರು ರಸ್ತೆ,Purple Line,16-Nov-15,Monday,Elevated,MYRD
+35,Nagasandra ,ನಾಗಸಂದ್ರ,Green Line,01-May-15,Friday,Elevated,NGSA
+36,Nallurhalli,ನಲ್ಲೂರುಹಳ್ಳಿ,Purple Line,26-Mar-23,Sunday,Elevated,VDHP
+37,National College,ನ್ಯಾಷನಲ್ ಕಾಲೇಜ್,Green Line,18-Jun-17,Sunday,Elevated,NLC
+38,Pantharapalya - Nayandahalli,ಪಂತರಪಾಳ್ಯ - ನಾಯಂಡಹಳ್ಳಿ,Purple Line,31-Aug-21,Tuesday,Elevated,NYHM
+39,Pattanagere,ಪಟ್ಟಣಗೆರೆ,Purple Line,31-Aug-21,Tuesday,Elevated,PATG
+40,Pattandur Agrahara,ಪಟ್ಟಂದೂರು ಅಗ್ರಹಾರ,Purple Line,26-Mar-23,Sunday,Elevated,ITPL
+41,Peenya,ಪೀಣ್ಯ,Green Line,01-Mar-14,Saturday,Elevated,PEYA
+42,Peenya Industry,ಪೀಣ್ಯ ಇಂಡಸ್ಟ್ರಿ,Green Line,01-Mar-14,Saturday,Elevated,PYID
+43,Rajajinagar,ರಾಜಾಜಿನಗರ,Green Line,01-Mar-14,Saturday,Elevated,RJNR
+44,Rajarajeshwari Nagar,ರಾಜರಾಜೇಶ್ವರಿ ನಗರ,Purple Line,31-Aug-21,Tuesday,Elevated,RRRN
+45,Rashtreeya Vidyalaya Road,ರಾಷ್ಟ್ರೀಯ ವಿದ್ಯಾಲಯ ರಸ್ತೆ,Green Line,18-Jun-17,Sunday,Elevated,RVR
+46,Mantri Square Sampige Road,"ಮಂತ್ರಿ ಸ್ಕ್ವೇರ್, ಸಂಪಿಗೆ ರಸ್ತೆ",Green Line,01-Mar-14,Saturday,Elevated,SPGD
+47,Sandal Soap Factory,ಸ್ಯಾಂಡಲ್ ಸೋಪ್ ಫ್ಯಾಕ್ಟರಿ,Green Line,01-Mar-14,Saturday,Elevated,SSFY
+48,Seetharampalya,ಸೀತಾರಾಮಪಾಳ್ಯ,Purple Line,26-Mar-23,Sunday,Elevated,VWIA
+49,Singayyanapalya,ಸಿಂಗಯ್ಯನಪಾಳ್ಯ,Purple Line,26-Mar-23,Sunday,Elevated,MDVP
+50,Silk Institute ,ರೇಷ್ಮೆ ಸಂಸ್ಥೆ,Green Line,15-Jan-21,Friday,Elevated,APTS
+51,"Sir.M.Visvesvaraya Stn., Central College","ಸರ್ ಎಂ.ವಿಶ್ವೇಶ್ವರಯ್ಯ ನಿಲ್ದಾಣ , ಸೆಂಟ್ರಲ್ ಕಾಲೇಜು",Purple Line,29-Apr-16,Friday,Underground,VSWA
+52,Swami Vivekananda Road,ಸ್ವಾಮಿ ವಿವೇಕಾನಂದ ರಸ್ತೆ,Purple Line,20-Oct-11,Thursday,Elevated,SVRD
+53,South End Circle,ಸೌತ್ ಎಂಡ್ ಸರ್ಕಲ್,Green Line,18-Jun-17,Sunday,Elevated,SECE
+54,Srirampura,ಶ್ರೀರಾಮ್‍ಪುರ,Green Line,01-Mar-14,Saturday,Elevated,SPRU
+55,Sri Sathya Sai Hospital,ಶ್ರೀ ಸತ್ಯ ಸಾಯಿ ಆಸ್ಪತ್ರೆ,Purple Line,26-Mar-23,Sunday,Elevated,SSHP
+56,Thalaghattapura,ತಲಘಟ್ಟಪುರ,Green Line,15-Jan-21,Friday,Elevated,TGTP
+57,Trinity,ಟ್ರಿನಿಟಿ,Purple Line,20-Oct-11,Thursday,Elevated,TTY
+58,Vajarahalli,ವಾಜರಹಳ್ಳಿ,Green Line,15-Jan-21,Friday,Elevated,VJRH
+59,"Dr. B. R. Ambedkar Station, Vidhana Soudha","ಡಾ. ಬಿ. ಆರ್. ಅಂಬೇಡ್ಕರ್ ನಿಲ್ದಾಣ, ವಿಧಾನ ಸೌಧ",Purple Line,29-Apr-16,Friday,Underground,VDSA
+60,Vijayanagar,ವಿಜಯನಗರ,Purple Line,16-Nov-15,Monday,Elevated,VJN
+61,Yelachenahalli,ಯಲಚೇನಹಳ್ಳಿ,Green Line,18-Jun-17,Sunday,Elevated,PUTH
+62,Yeshwanthpur,ಯಶವಂತಪುರ,Green Line,01-Mar-14,Saturday,Elevated,YPM
+63,Whitefield (Kadugodi),ವೈಟ್ ಫೀಲ್ಡ್ (ಕಾಡುಗೋಡಿ),Purple Line,26-Mar-23,Sunday,Elevated,WHTM
