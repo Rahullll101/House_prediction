@@ -1,0 +1,11 @@
+**Best Model Comparison**
+
+| Model                    | Train R² | Test R²   | Test RMSE | Test MAE | Notes                           |
+| ------------------------ | -------- | --------- | --------- | -------- | ------------------------------- |
+| **Plain Decision Tree**  | 0.999    | **0.758** | **69.05** | 24.90    | Best accuracy but heavy overfit |
+| Hypertuned Decision Tree | 0.774    | 0.738     | 71.83     | 29.27    | Balanced, stable                |
+| Hypertuned RandomForest  | 0.965    | 0.731     | \~72–75   | \~25–27  | Strong but overfitting          |
+| Ridge                    | 0.851    | 0.691     | 77.99     | 25.88    | Best linear model               |
+| Linear Regression        | 0.860    | 0.698     | 77.99     | \~25     | Good baseline                   |
+| ElasticNet               | 0.827    | 0.676     | 79.90     | 26.53    | Slightly weaker                 |
+| Lasso                    | 0.790    | 0.654     | 82.56     | 28.89    | Weakest                         |
