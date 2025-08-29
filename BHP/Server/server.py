@@ -16,8 +16,8 @@ load_dotenv()
 
 
 # === OpenAI API Setup ===
-openai.api_key = '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'
 
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 # === Flask App ===
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
