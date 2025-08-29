@@ -1,0 +1,88 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.full-width {
+  grid-column: span 2;
+}
+
+button {
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+#result {
+  text-align: center;
+  margin-top: 20px;
+  color: #333;
+  font-weight: bold;
+}
+/* Make dropdown match dark theme */
+.dark-select, .dark-select option {
+  background-color: rgba(31, 41, 55, 0.95); /* Dark background */
+  color: white;
+}
+
+.dark-select option:hover {
+  background-color: rgba(59, 130, 246, 0.8); /* Blue hover */
+}
+
+/* Uniform dark theme input styling */
+.input-field {
+  @apply w-full px-3 py-2 rounded-lg bg-gray-800 border border-gray-600 text-white 
+         placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400;
+}
+
+/* Make dropdown menu dark */
+select option {
+  background-color: #1f2937; /* gray-800 */
+  color: white;
+}
+
+/* Style placeholder for datalist inputs */
+input::placeholder {
+  color: rgba(200, 200, 200, 0.6);
+}

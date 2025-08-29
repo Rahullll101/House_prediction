@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bangalore RealEstate Price Predictor</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Consistent dark theme for all input fields and dropdowns */
+    .input-dark {
+      background-color: #1f2937; /* dark gray */
+      border: 1px solid #374151;
+      color: white;
+      padding: 0.5rem 0.75rem;
+      border-radius: 0.5rem;
+      width: 100%;
+    }
+    .input-dark:focus {
+      outline: none;
+      border-color: #3b82f6; /* blue-500 */
+      box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+    }
+    .input-dark::placeholder {
+      color: rgba(200, 200, 200, 0.6);
+    }
+    /* Dark dropdown options */
+    select option {
+      background-color: #1f2937;
+      color: white;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-gray-900 to-black min-h-screen flex items-center justify-center text-white">
+
+  <div class="w-full max-w-4xl p-6 backdrop-blur-md bg-gray-900/80 rounded-2xl shadow-lg">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold flex justify-center items-center gap-2">
+        <span>🏠</span> House Price Prediction
+      </h1>
+      <p class="text-gray-300 text-sm">Enter property details and get an instant price estimate</p>
+    </div>
+
+    <!-- Form Grid -->
+    <form id="price-form" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div>
+        <label class="block text-sm mb-1"> BHK</label>
+        <input type="number" id="bhk" placeholder="e.g., 3" class="input-dark">
+      </div>
+
+      <div>
+        <label class="block text-sm mb-1">Bathrooms</label>
+        <input type="number" id="bath" placeholder="e.g., 2" class="input-dark">
+      </div>
+
+      <div>
+        <label class="block text-sm mb-1">Area (sqft)</label>
+        <input type="number" id="total_sqft" placeholder="e.g., 1200" class="input-dark">
+      </div>
+
+      <div>
+        <label class="block text-sm mb-1">Year Built</label>
+        <input type="number" id="built_year" placeholder="e.g., 2015" class="input-dark">
+      </div>
+
+      <div>
+        <label class="block text-sm mb-1">Location</label>
+        <input list="location-list" id="location" placeholder="Start typing to search location" class="input-dark">
+        <datalist id="location-list"></datalist>
+      </div>
+
+      <div>
+        <label class="block text-sm mb-1">Nearby Metro</label>
+        <select id="nearby_metro" class="input-dark">
+          <option value="">Select</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block text-sm mb-1">Area Type</label>
+        <select id="area_type" class="input-dark">
+          <option>Built-up  Area</option>
+          <option>Carpet  Area</option>
+          <option>Plot  Area</option>
+          <option>Super built-up  Area</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block text-sm mb-1">Availability</label>
+        <select id="availability" class="input-dark">
+          <option>Ready To Move</option>
+          <option>Under Construction</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block text-sm mb-1">Age Segment</label>
+        <select id="age_segment" class="input-dark">
+          <option value="auto">Auto Detect</option>
+          <option value="New">New</option>
+          <option value="Mid">Mid</option>
+          <option value="Old">Old</option>
+        </select>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="md:col-span-3">
+        <button type="submit"
+          class="w-full bg-gradient-to-r from-blue-500 to-blue-700 py-2 rounded-lg text-lg font-semibold text-white hover:opacity-90 transition">
+          Predict Price
+        </button>
+      </div>
+    </form>
+
+    <!-- Result -->
+    <h2 id="result" class="text-center mt-6 text-xl font-semibold text-blue-300"></h2>
+
+    <p class="text-center text-sm text-gray-400 mt-4">
+      Built with ❤️ using Flask + ML + Tailwind
+    </p>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
