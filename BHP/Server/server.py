@@ -1,12 +1,12 @@
 """
 Flask server for Bengaluru House Price Prediction API
-with OpenAI GPT description generation.
+with OpenAI GPT description generation and static frontend serving.
 """
 
 import os
 import json
 import logging
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 from dotenv import load_dotenv
 import openai
@@ -30,17 +30,29 @@ if not openai.api_key:
 # ===============================
 # Flask App Setup
 # ===============================
-app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}})  # Optionally restrict origins later
+app = Flask(
+    __name__,
+    static_folder="../client",  # Folder where index.html, js, css exist
+    static_url_path="/"
+)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 # ===============================
-# Routes
+# Frontend Routes
 # ===============================
 @app.route("/", methods=["GET"])
-def index():
-    """Health check endpoint."""
-    return "🏠 Bengaluru House Price Prediction API is running with OpenAI!"
+def serve_index():
+    """Serve the main index.html file."""
+    return send_from_directory("../client", "index.html")
 
+@app.route("/<path:path>", methods=["GET"])
+def serve_static(path):
+    """Serve other static files like JS, CSS."""
+    return send_from_directory("../client", path)
+
+# ===============================
+# API Routes
+# ===============================
 @app.route("/get_location_names", methods=["GET"])
 def get_location_names():
     """Get available location names from the trained model."""
@@ -70,7 +82,7 @@ def predict_home_price():
         nearby_metro = data.get("nearby_metro", "Yes")
         age_segment = data.get("age_segment")
 
-        # Auto-calculate age segment if not provided
+        # Auto-detect age segment if not provided
         if not age_segment:
             if property_age <= 5:
                 age_segment = "New"
@@ -85,7 +97,7 @@ def predict_home_price():
             area_type, availability, location, nearby_metro, age_segment
         )
 
-        # Prepare payload for GPT description
+        # Payload for GPT description
         payload = {
             "location": location,
             "total_sqft": total_sqft,
@@ -144,4 +156,3 @@ if __name__ == "__main__":
     util.load_saved_artifacts()
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port, debug=False)
-
