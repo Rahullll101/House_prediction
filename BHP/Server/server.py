@@ -10,7 +10,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from dotenv import load_dotenv
 import openai
-import util
+from . import util  # Use relative import if util.py is in the same directory
 
 # ===============================
 # Logging Setup
