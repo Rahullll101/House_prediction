@@ -14,6 +14,7 @@
       padding: 0.5rem 0.75rem;
       border-radius: 0.5rem;
       width: 100%;
+      font-size: 0.95rem;
     }
     .input-dark:focus {
       outline: none;
@@ -30,20 +31,21 @@
     }
   </style>
 </head>
-<body class="bg-gradient-to-b from-gray-900 to-black min-h-screen flex items-center justify-center text-white">
+<body class="bg-gradient-to-b from-gray-900 to-black min-h-screen flex items-center justify-center text-white px-4">
 
-  <div class="w-full max-w-4xl p-6 backdrop-blur-md bg-gray-900/80 rounded-2xl shadow-lg">
+  <div class="w-full max-w-4xl p-6 md:p-8 backdrop-blur-md bg-gray-900/80 rounded-2xl shadow-lg">
+    <!-- Header -->
     <div class="text-center mb-6">
-      <h1 class="text-3xl font-bold flex justify-center items-center gap-2">
+      <h1 class="text-2xl md:text-3xl font-bold flex justify-center items-center gap-2">
         <span>🏠</span> House Price Prediction
       </h1>
-      <p class="text-gray-300 text-sm">Enter property details and get an instant price estimate</p>
+      <p class="text-gray-300 text-sm md:text-base">Enter property details and get an instant price estimate</p>
     </div>
 
     <!-- Form Grid -->
-    <form id="price-form" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <form id="price-form" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
       <div>
-        <label class="block text-sm mb-1"> BHK</label>
+        <label class="block text-sm mb-1">BHK</label>
         <input type="number" id="bhk" placeholder="e.g., 3" class="input-dark">
       </div>
 
@@ -106,7 +108,7 @@
       </div>
 
       <!-- Submit Button -->
-      <div class="md:col-span-3">
+      <div class="sm:col-span-2 md:col-span-3">
         <button type="submit"
           class="w-full bg-gradient-to-r from-blue-500 to-blue-700 py-2 rounded-lg text-lg font-semibold text-white hover:opacity-90 transition">
           Predict Price
@@ -118,7 +120,7 @@
     <h2 id="result" class="text-center mt-6 text-xl font-semibold text-blue-300"></h2>
 
     <p class="text-center text-sm text-gray-400 mt-4">
-      Built with ❤️ using Flask + ML + Tailwind
+      Built with ❤️ using Flask + ML + GenAI
     </p>
   </div>
 
