@@ -25,20 +25,25 @@ def load_saved_artifacts():
     global __scaler
 
     print("loading saved artifacts...start")
+    print(f"Artifacts path: {ARTIFACTS_PATH}")  # Debug for Render
 
-    with open(os.path.join(ARTIFACTS_PATH, "columns.json"), "r") as f:
-        __data_columns = json.load(f)["data_columns"]
+    try:
+        with open(os.path.join(ARTIFACTS_PATH, "columns.json"), "r") as f:
+            __data_columns = json.load(f)["data_columns"]
 
-    if __model is None:
-        with open(os.path.join(ARTIFACTS_PATH, "banglore_home_prices_model.pickle"), "rb") as f:
-            __model = pickle.load(f)
+        if __model is None:
+            with open(os.path.join(ARTIFACTS_PATH, "banglore_home_prices_model.pickle"), "rb") as f:
+                __model = pickle.load(f)
 
-    if __scaler is None:
-        with open(os.path.join(ARTIFACTS_PATH, "std_scaler.pickle"), "rb") as f:
-            __scaler = pickle.load(f)
+        if __scaler is None:
+            with open(os.path.join(ARTIFACTS_PATH, "std_scaler.pickle"), "rb") as f:
+                __scaler = pickle.load(f)
 
-    print(f"Loaded {len(__data_columns)} columns and scaler")
-    print("loading saved artifacts...done")
+        print(f"Loaded {len(__data_columns)} columns and scaler successfully")
+        print("loading saved artifacts...done")
+    except Exception as e:
+        print(f"ERROR loading artifacts: {e}")
+        raise
 
 
 def set_one_hot(x, prefix, value, data_columns):
@@ -92,6 +97,9 @@ def get_location_names():
     """
     Get all available location names
     """
+    global __data_columns
+    if __data_columns is None:  # Ensure artifacts are loaded
+        load_saved_artifacts()
     return [col.replace("location_", "") for col in __data_columns if col.startswith("location_")]
 
 
@@ -99,6 +107,8 @@ def get_data_columns():
     """
     Get full list of column names
     """
+    if __data_columns is None:  # Ensure artifacts are loaded
+        load_saved_artifacts()
     return __data_columns
 
 
@@ -121,4 +131,3 @@ if __name__ == "__main__":
     )
 
     print(f"Predicted price: {price} lakhs")
-# Trigger redeploy
