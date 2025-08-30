@@ -142,4 +142,6 @@ def predict_home_price():
 if __name__ == "__main__":
     logger.info("🚀 Starting Flask server for Bengaluru House Price Prediction...")
     util.load_saved_artifacts()
-    app.run(host="0.0.0.0", port=5000, debug=False)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=False)
+
