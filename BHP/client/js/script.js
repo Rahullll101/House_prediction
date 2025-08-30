@@ -1,6 +1,15 @@
+// ===============================
+// Configuration
+// ===============================
+const BASE_URL = "https://house-prediction-w0vn.onrender.com";
+// For local testing, uncomment the next line:
+// const BASE_URL = "http://127.0.0.1:5000";
+
+// ===============================
 // Load locations dynamically when page loads
+// ===============================
 window.onload = function () {
-  fetch("http://127.0.0.1:5000/get_location_names")
+  fetch(`${BASE_URL}/get_location_names`)
     .then(response => response.json())
     .then(data => {
       const locationList = document.getElementById("location-list");
@@ -15,7 +24,9 @@ window.onload = function () {
     });
 };
 
+// ===============================
 // Validate user inputs
+// ===============================
 function validateInputs(payload) {
   const currentYear = new Date().getFullYear();
   let errors = [];
@@ -33,7 +44,9 @@ function validateInputs(payload) {
   return errors;
 }
 
+// ===============================
 // Handle form submission
+// ===============================
 document.getElementById("price-form").addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -67,7 +80,7 @@ document.getElementById("price-form").addEventListener("submit", function (e) {
   }
 
   // API call to backend
-  fetch("http://127.0.0.1:5000/predict_home_price", {
+  fetch(`${BASE_URL}/predict_home_price`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),
