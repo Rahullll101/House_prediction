@@ -1,1 +1,1 @@
-web: gunicorn Server.server:app
+gunicorn BHP.Server.server:app
