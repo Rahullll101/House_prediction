@@ -74,13 +74,19 @@ The frontend will be available at: http://127.0.0.1:8000
 ```
 ## 🌐 Deploying to Render
 ```
-1. Push your code to a GitHub repository.
-2. On Render create a New Web Service.
-3. Connect your GitHub repo.
-4. In Build Command: pip install -r requirements.txt
-5. In Start Command: gunicorn server:app
-6. Add environment variable: OPENAI_API_KEY=your_key
-7 . Deploy and grab your live URL 🚀
+1. Push your code to a GitHub repository.  
+2. On Render, create a **New Web Service**.  
+3. Connect your GitHub repository.  
+4. In **Build Command**: `pip install -r requirements.txt`  
+5. In **Start Command**: `gunicorn server:app`  
+6. Add environment variable: `OPENAI_API_KEY=your_key`  
+7. Deploy and grab your **live URL** 🚀  
+
+Note for free services:
+- Render free web services spin down after **15 minutes of inactivity** to save resources.  
+- When you visit the URL after inactivity, it can take up to **1 minute** for the service to wake up.  
+- For production or always-on availability, consider upgrading to a paid plan.
+
 ```
 
 ## 🧪 API Endpoints
@@ -112,7 +118,7 @@ Response:
 ## 🛠 Troubleshooting Guide
 
 LOCAL HOSTING
-
+```
 1. Start the Backend
 cd Server
 python server.py
@@ -142,11 +148,11 @@ http://127.0.0.1:8000
 - For sklearn or library mismatch errors:
   pip install scikit-learn==1.7.1
 - Always match the training and runtime versions.
-
+```
 
 
 RENDER DEPLOYMENT
-
+```
 1. Procfile Check
 web: gunicorn BHP.Server.server:app
 - Ensure:
@@ -184,7 +190,7 @@ web: gunicorn BHP.Server.server:app
   Example:
   const apiUrl = "https://<your-app-name>.onrender.com";
 - Clear browser cache and reload.
-
+```
 
 ## 🤝 Contributing
 
