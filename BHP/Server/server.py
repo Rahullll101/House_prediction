@@ -5,29 +5,41 @@ with OpenAI GPT description generation.
 
 import os
 import json
+import logging
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-import util
-import openai
 from dotenv import load_dotenv
+import openai
+import util
 
-# Load environment variables from .env file
-load_dotenv()
+# ===============================
+# Logging Setup
+# ===============================
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
+logger = logging.getLogger(__name__)
 
+# ===============================
+# Load environment variables
+# ===============================
+load_dotenv(override=True)
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
-# === OpenAI API Setup ===
+if not openai.api_key:
+    raise ValueError("❌ OPENAI_API_KEY not found. Set it in .env or Render environment variables.")
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-# === Flask App ===
+# ===============================
+# Flask App Setup
+# ===============================
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}})
+CORS(app, resources={r"/*": {"origins": "*"}})  # Optionally restrict origins later
 
-
+# ===============================
+# Routes
+# ===============================
 @app.route("/", methods=["GET"])
 def index():
     """Health check endpoint."""
     return "🏠 Bengaluru House Price Prediction API is running with OpenAI!"
-
 
 @app.route("/get_location_names", methods=["GET"])
 def get_location_names():
@@ -36,15 +48,15 @@ def get_location_names():
         locations = util.get_location_names()
         return jsonify({"locations": locations})
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
-
+        logger.error(f"Error fetching location names: {e}")
+        return jsonify({"error": "Failed to fetch location names"}), 500
 
 @app.route("/predict_home_price", methods=["POST"])
 def predict_home_price():
     """Predict house price and generate a property description."""
     try:
         data = request.get_json()
-        print("Incoming request:", data)
+        logger.info(f"Incoming request for location: {data.get('location', 'Unknown')}")
 
         # Extract input values with defaults
         total_sqft = float(data.get("total_sqft", 1000))
@@ -58,7 +70,7 @@ def predict_home_price():
         nearby_metro = data.get("nearby_metro", "Yes")
         age_segment = data.get("age_segment")
 
-        # Auto-calculate age segment
+        # Auto-calculate age segment if not provided
         if not age_segment:
             if property_age <= 5:
                 age_segment = "New"
@@ -113,7 +125,7 @@ def predict_home_price():
             description = response.choices[0].message["content"].strip()
 
         except Exception as e:
-            print(f"OpenAI Error: {e}")
+            logger.error(f"OpenAI Error: {e}")
 
         return jsonify({
             "estimated_price_lakhs": price,
@@ -121,11 +133,13 @@ def predict_home_price():
         })
 
     except Exception as e:
-        print("Error:", e)
-        return jsonify({"error": str(e)}), 400
+        logger.error(f"Error in predict_home_price: {e}")
+        return jsonify({"error": "Invalid input or internal error"}), 400
 
-
+# ===============================
+# Entry Point
+# ===============================
 if __name__ == "__main__":
-    print("Starting Flask server for Bengaluru House Price Prediction...")
+    logger.info("🚀 Starting Flask server for Bengaluru House Price Prediction...")
     util.load_saved_artifacts()
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=False)
