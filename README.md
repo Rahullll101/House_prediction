@@ -1,6 +1,6 @@
 # 🏠 Bengaluru House Price Prediction
 
-A machine learning web application that predicts house prices in Bengaluru and generates a professional description using OpenAI GPT.  
+A machine learning web application that predicts house prices in Bengaluru and generates a professional description using OpenAI GPT API.  
 Built with **Flask**, **Scikit-learn**, and **Vanilla JS**.
 
 ---
